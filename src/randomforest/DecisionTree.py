@@ -1,7 +1,23 @@
 import numpy as np
 from collections import Counter
 
+
 class Node:
+    """
+    Represents a single node in the Decision Tree.
+
+    Parameters:
+        feature : int, optional
+            Index of the feature used for splitting this node.
+        threshold : float, optional
+            Threshold value for the split.
+        left : Node, optional
+            Left child node.
+        right : Node, optional
+            Right child node.
+        value : any, optional
+            Class label value if this is a leaf node.
+    """
     def __init__(self, feature=None, threshold=None, left=None, right=None, value=None):
         self.feature = feature
         self.threshold = threshold
@@ -10,10 +26,22 @@ class Node:
         self.value = value
 
     def is_leaf_node(self):
+        """Check if the node is a leaf (has a value)."""
         return self.value is not None
 
 
 class DecisionTree:
+    """
+    A decision Tree Classifier.
+
+    Parameters:
+        min_samples_split : int, default=2
+            The minimum number of samples required to split an internal node.
+        max_depth : int, default=100
+            The maximum depth of the tree.
+        n_features : int, optional
+            The number of features to consider when looking for the best split.
+    """
     def __init__(self, min_samples_split=2, max_depth=100, n_features=None):
         self.min_samples_split = min_samples_split
         self.max_depth = max_depth
@@ -21,6 +49,15 @@ class DecisionTree:
         self.root = None
 
     def fit(self, X, y):
+        """
+        Build a decision tree classifier from the training set (X, y).
+
+        Parameters:
+            X : array-like of shape (n_samples, n_features)
+                The training input samples.
+            y : array-like of shape (n_samples)
+                The target values (class labels)
+        """
         if self.n_features is None:
             self.n_features = X.shape[1]
         else:
@@ -104,6 +141,17 @@ class DecisionTree:
         return most_common
 
     def predict(self, X):
+        """
+        Predict class for X.
+
+        Parameters:
+            X : array-like of shape (n_samples, n_features)
+                The input samples.
+
+        Returns:
+            y : array-like of shape (n_samples)
+                The predicted classes.
+        """
         predictions = []
         for i in range(len(X)):
             prediction = self._traverse_tree(X[i], self.root)

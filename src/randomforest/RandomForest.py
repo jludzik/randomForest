@@ -3,7 +3,21 @@ from .DecisionTree import DecisionTree
 import numpy as np
 from collections import Counter
 
+
 class RandomForest:
+    """
+    A Random Forest Classifier implementation.
+
+    Parameters:
+        n_trees : int, default=50
+            Number of trees in the forest.
+        max_depth : int, default=50
+            Maximum depth of each tree.
+        min_samples_split : int, default=2
+            Minimum samples required to split a node.
+        n_features : int, optional
+            Number of features to consider for best split.
+    """
     def __init__(self, n_trees=50, max_depth=50, min_samples_split=2, n_features=None):
         self.n_trees = n_trees
         self.max_depth = max_depth
@@ -12,6 +26,15 @@ class RandomForest:
         self.trees = []
 
     def fit(self, X, y):
+        """
+        Fit the random forest model.
+
+        Parameters:
+            X : array-like of shape (n_samples, n_features)
+                Training data.
+            y : array-like of shape (n_samples)
+                Target values.
+        """
         self.trees = []
         for i in range(self.n_trees):
             tree = DecisionTree(
@@ -34,6 +57,17 @@ class RandomForest:
         return most_common
 
     def predict(self, X):
+        """
+        Predict class for X.
+
+        Parameters:
+            X : array-like of shape (n_samples, n_features)
+                Input samples.
+
+        Returns:
+            predictions : array-like of shape (n_samples)
+                Predicted values.
+        """
         all_predictions = []
 
         for i in range(len(X)):
