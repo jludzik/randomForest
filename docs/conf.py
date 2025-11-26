@@ -42,13 +42,15 @@ except FileNotFoundError:
 
 try:
     import sphinx
+    from sphinx.ext import apidoc
 
     cmd_line = f"sphinx-apidoc --implicit-namespaces -f -o {output_dir} {module_dir}"
 
-    args = cmd_line.split(" ")
-    if tuple(sphinx.__version__.split(".")) >= ("1", "7"):
+    #args = cmd_line.split(" ")
+    #if tuple(sphinx.__version__.split(".")) >= ("1", "7"):
         # This is a rudimentary parse_version to avoid external dependencies
-        args = args[1:]
+    #    args = args[1:]
+    args = ["--implicit-namespaces", "-f", "-o", output_dir, module_dir]
 
     apidoc.main(args)
 except Exception as e:

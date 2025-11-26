@@ -12,7 +12,7 @@ from sklearn.datasets import load_wine
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
-from src.randomforest.RandomForest import RandomForest
+from randomforest.RandomForest import RandomForest
 
 def get_data():
     csv_path = os.path.join(os.path.dirname(__file__), "winequality-red.csv")

@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from src.randomforest.RandomForest import RandomForest
+from randomforest.RandomForest import RandomForest
 
 def test_simple_classification():
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
