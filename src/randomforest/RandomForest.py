@@ -48,6 +48,8 @@ class RandomForest:
 
     def _bootstrap_samples(self, X, y):
         n_samples = X.shape[0]
+        # Perform sampling with replacement (bootstrapping)
+        # This ensures diversity among the trees in the forest
         indices = np.random.choice(n_samples, n_samples, replace=True)
         return X[indices], y[indices]
 
@@ -75,9 +77,11 @@ class RandomForest:
             votes = []
 
             for tree in self.trees:
+                # Aggregate predictions from all trees
                 prediction = tree.predict([sample])[0]
                 votes.append(prediction)
 
+            # Majority voting: choose the most common class label
             final_prediction = self._most_common_label(votes)
             all_predictions.append(final_prediction)
 

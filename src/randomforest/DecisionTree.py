@@ -101,19 +101,24 @@ class DecisionTree:
         return best_feature, best_threshold
 
     def _information_gain(self, y, X_column, split_threshold):
+        # 1. Calculate parent entropy before the split
         parent_entropy = self._entropy(y)
 
+        # 2. Split the data into left and right children based on the threshold
         left_indices, right_indices = self._split(X_column, split_threshold)
 
         if len(left_indices) == 0 or len(right_indices) == 0:
             return 0
 
+        # 3. Calculate the weighted average entropy of the children
         n = len(y)
         n_left, n_right = len(left_indices), len(right_indices)
         e_left, e_right = self._entropy(y[left_indices]), self._entropy(y[right_indices])
         child_entropy = (n_left / n) * e_left + (n_right / n) * e_right
 
+        # 4. Information Gain (IG) = Parent Entropy - Weighted Children Entropy
         information_gain = parent_entropy - child_entropy
+
         return information_gain
 
     def _split(self, X_column, threshold):
@@ -129,6 +134,8 @@ class DecisionTree:
     def _entropy(self, y):
         hist = np.bincount(y)
         ps = hist / len(y)
+        # Shanon Entropy formula: H(s) = - sum(p_i * log(p_i))
+        # We use natural log here (numpy.log), which is acceptable for comparison purposes
         entropy = 0
         for p in ps:
             if p > 0:

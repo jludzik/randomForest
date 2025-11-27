@@ -1,3 +1,6 @@
+# NOTE: This is a basic demonstration script.
+# For a full comparision with Scikit-Learn and plots, please run 'compare_plots.py'
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
