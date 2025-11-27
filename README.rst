@@ -50,6 +50,10 @@ Usage
 
    The results will be saved as ``comparision_plots.png``.
 
+    .. image:: example/comparision_plots.png
+       :width: 800
+       :alt: Comparison of Accuracy results
+
 3. **Documentation:**
    The documentation source is located in the ``docs/`` directory. To build the HTML version:
 
