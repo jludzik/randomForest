@@ -1,0 +1,29 @@
+randomforest package
+====================
+
+Submodules
+----------
+
+randomforest.DecisionTree module
+--------------------------------
+
+.. automodule:: randomforest.DecisionTree
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+randomforest.RandomForest module
+--------------------------------
+
+.. automodule:: randomforest.RandomForest
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: randomforest
+   :members:
+   :show-inheritance:
+   :undoc-members:
