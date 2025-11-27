@@ -1,49 +1,59 @@
-.. These are examples of badges you might want to add to your README:
-   please update the URLs accordingly
-
-    .. image:: https://api.cirrus-ci.com/github/<USER>/randomForest.svg?branch=main
-        :alt: Built Status
-        :target: https://cirrus-ci.com/github/<USER>/randomForest
-    .. image:: https://readthedocs.org/projects/randomForest/badge/?version=latest
-        :alt: ReadTheDocs
-        :target: https://randomForest.readthedocs.io/en/stable/
-    .. image:: https://img.shields.io/coveralls/github/<USER>/randomForest/main.svg
-        :alt: Coveralls
-        :target: https://coveralls.io/r/<USER>/randomForest
-    .. image:: https://img.shields.io/pypi/v/randomForest.svg
-        :alt: PyPI-Server
-        :target: https://pypi.org/project/randomForest/
-    .. image:: https://img.shields.io/conda/vn/conda-forge/randomForest.svg
-        :alt: Conda-Forge
-        :target: https://anaconda.org/conda-forge/randomForest
-    .. image:: https://pepy.tech/badge/randomForest/month
-        :alt: Monthly Downloads
-        :target: https://pepy.tech/project/randomForest
-    .. image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Twitter
-        :alt: Twitter
-        :target: https://twitter.com/randomForest
-
 .. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
     :alt: Project generated with PyScaffold
     :target: https://pyscaffold.org/
 
-|
-
 ============
-randomForest
+RandomForest
 ============
 
+Final project for the **Python Programming** course.
+This package contains a custom implementation of the **Random Forest** and **Decision Tree** algorithms, built from scratch using NumPy, along with a performance comparison against the Scikit-Learn library.
 
-    Add a short description here!
+Authors
+=======
+* Kuba Ludzik
+* Filip Żurek
 
+Project Description
+===================
+The goal of this project was to create a fully functional Random Forest classifier that:
+* Implements the Decision Tree algorithm (tree growth, entropy calculation, information gain).
+* Implements the Random Forest ensemble method (bootstrapping, vote aggregation).
+* Adheres to the Scikit-Learn interface (providing ``fit`` and ``predict`` methods).
 
-A longer description of your project goes here...
+Requirements and Installation
+=============================
+The project relies on ``numpy``, ``pandas``, ``matplotlib``, and ``scikit-learn`` (for benchmarking purposes).
 
+To install the package in development mode:
 
-.. _pyscaffold-notes:
+.. code-block:: bash
 
-Note
-====
+    pip install -e .
 
-This project has been set up using PyScaffold 4.6. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+Usage
+=====
+
+1. **Unit Tests:**
+   To verify the correctness of the implementation:
+
+   .. code-block:: bash
+
+       pytest
+
+2. **Comparison with Scikit-Learn (Plots):**
+   To generate comparison plots (Accuracy vs. Tree Depth / Number of Estimators):
+
+   .. code-block:: bash
+
+       python example/compare_plots.py
+
+   The results will be saved as ``comparision_plots.png``.
+
+3. **Documentation:**
+   The documentation source is located in the ``docs/`` directory. To build the HTML version:
+
+   .. code-block:: bash
+
+       cd docs
+       make html
