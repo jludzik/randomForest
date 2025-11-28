@@ -50,7 +50,7 @@ Usage
 
    The results will be saved as ``comparision_plots.png``.
 
-    .. image:: example/comparision_plots.png
+    .. image:: https://github.com/jludzik/randomForest/blob/main/example/comparision_plots.png?raw=true
        :width: 800
        :alt: Comparison of Accuracy results
 
