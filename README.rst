@@ -11,7 +11,7 @@ This package contains a custom implementation of the **Random Forest** and **Dec
 
 Authors
 =======
-* Kuba Ludzik
+* Jakub Łudzik
 * Filip Żurek
 
 Project Description
