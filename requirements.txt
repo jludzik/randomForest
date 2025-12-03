@@ -3,3 +3,6 @@ pandas~=2.3.3
 scikit-learn~=1.7.2
 setuptools~=80.9.0
 matplotlib~=3.10.7
+pytest
+pytest-cov
+sphinx
