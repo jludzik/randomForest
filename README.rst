@@ -62,13 +62,16 @@ Follow these steps to set up the project environment from scratch.
    *(You should see `(.venv)` appear at the beginning of your terminal line).*
 
 4. **Install the Package and Dependencies**
-   Install the project in editable mode along with required libraries for plotting and testing:
+   Install the project dependencies from requirements file and the package in editable mode:
 
    .. code-block:: bash
 
        pip install --upgrade pip
+       pip install -r requirements.txt
        pip install -e .
-       pip install matplotlib pandas scikit-learn pytest sphinx
+       pip install pytest pytest-cov sphinx
+
+   *(Note: `pytest-cov` is required to run tests with coverage reporting enabled in setup.cfg)*
 
 Usage
 =====
