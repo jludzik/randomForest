@@ -39,11 +39,21 @@
 <h1>RandomForest<a class="headerlink" href="#randomforest" title="Link to this heading">¶</a></h1>
 <p>Final project for the <strong>Python Programming</strong> course.
 This package contains a custom implementation of the <strong>Random Forest</strong> and <strong>Decision Tree</strong> algorithms, built from scratch using NumPy, along with a performance comparison against the Scikit-Learn library.</p>
-<section id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Link to this heading">¶</a></h2>
+<section id="authors-and-context">
+<h2>Authors and Context<a class="headerlink" href="#authors-and-context" title="Link to this heading">¶</a></h2>
 <ul class="simple">
+<li><dl class="simple">
+<dt><strong>Authors:</strong></dt><dd><ul>
 <li><p>Jakub Łudzik</p></li>
 <li><p>Filip Żurek</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Institution:</strong> AGH University of Krakow</p></li>
+<li><p><strong>Faculty:</strong> Faculty of Computer Science, Electronics and Telecommunications</p></li>
+<li><p><strong>Field of Study:</strong> Electronics and Telecommunications</p></li>
+<li><p><strong>Course:</strong> Programming in Python Language</p></li>
 </ul>
 </section>
 <section id="project-description">
@@ -53,16 +63,51 @@ This package contains a custom implementation of the <strong>Random Forest</stro
 * Implements the Random Forest ensemble method (bootstrapping, vote aggregation).
 * Adheres to the Scikit-Learn interface (providing <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code> methods).</p>
 </section>
-<section id="requirements-and-installation">
-<h2>Requirements and Installation<a class="headerlink" href="#requirements-and-installation" title="Link to this heading">¶</a></h2>
-<p>The project relies on <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, and <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> (for benchmarking purposes).</p>
-<p>To install the package in development mode:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<section id="installation-guide-step-by-step">
+<h2>Installation Guide (Step-by-Step)<a class="headerlink" href="#installation-guide-step-by-step" title="Link to this heading">¶</a></h2>
+<p>Follow these steps to set up the project environment from scratch.</p>
+<ol class="arabic">
+<li><p><strong>Prerequisites</strong>
+Ensure you have Python 3.8+ installed. You can check this by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
 </pre></div>
 </div>
+</li>
+<li><p><strong>Create a Virtual Environment</strong>
+It is highly recommended to run this project in an isolated virtual environment. Run the following command in the project root directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+</pre></div>
+</div>
+</li>
+<li><p><strong>Activate the Virtual Environment</strong>
+You need to activate the environment before installing packages.</p>
+<ul>
+<li><p><strong>On macOS / Linux:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</pre></div>
+</div>
+</li>
+<li><p><strong>On Windows (PowerShell/CMD):</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</pre></div>
+</div>
+</li>
+</ul>
+<p><em>(You should see `(.venv)` appear at the beginning of your terminal line).</em></p>
+</li>
+<li><p><strong>Install the Package and Dependencies</strong>
+Install the project in editable mode along with required libraries for plotting and testing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+pip<span class="w"> </span>install<span class="w"> </span>matplotlib<span class="w"> </span>pandas<span class="w"> </span>scikit-learn<span class="w"> </span>pytest<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</li>
+</ol>
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>Ensure your virtual environment is activated (step 3 above) before running these commands.</p>
 <ol class="arabic">
 <li><p><strong>Unit Tests:</strong>
 To verify the correctness of the implementation:</p>
@@ -85,10 +130,17 @@ To generate comparison plots (Accuracy vs. Tree Depth / Number of Estimators):</
 The documentation source is located in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory. To build the HTML version:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs
 make<span class="w"> </span>html
+<span class="c1"># Open docs/_build/html/index.html in your browser</span>
 </pre></div>
 </div>
 </li>
 </ol>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<p>This software is distributed under the MIT License. Refer to the <cite>LICENSE.txt</cite> file for the full text.</p>
+<p>—
+<em>AGH University of Krakow - Programming in Python Language Course Project 2025</em></p>
 </section>
 </section>
 
@@ -120,10 +172,11 @@ make<span class="w"> </span>html
 <script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authors-and-context">Authors and Context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#project-description">Project Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requirements-and-installation">Requirements and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-guide-step-by-step">Installation Guide (Step-by-Step)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributions &amp; Help</a></li>
