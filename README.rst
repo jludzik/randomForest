@@ -9,10 +9,16 @@ RandomForest
 Final project for the **Python Programming** course.
 This package contains a custom implementation of the **Random Forest** and **Decision Tree** algorithms, built from scratch using NumPy, along with a performance comparison against the Scikit-Learn library.
 
-Authors
-=======
-* Jakub Łudzik
-* Filip Żurek
+Authors and Context
+===================
+
+* **Authors:**
+    * Jakub Łudzik
+    * Filip Żurek
+* **Institution:** AGH University of Krakow
+* **Faculty:** Faculty of Computer Science, Electronics and Telecommunications
+* **Field of Study:** Electronics and Telecommunications
+* **Course:** Programming in Python Language
 
 Project Description
 ===================
@@ -98,3 +104,11 @@ Ensure your virtual environment is activated (step 3 above) before running these
        cd docs
        make html
        # Open docs/_build/html/index.html in your browser
+
+License
+=======
+
+This software is distributed under the MIT License. Refer to the `LICENSE.txt` file for the full text.
+
+--------------------------------------------------------------------------------
+*AGH University of Krakow - Programming in Python Language Course Project 2025*
