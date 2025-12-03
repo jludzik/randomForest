@@ -6,17 +6,22 @@
 RandomForest
 ============
 
-Final project for the **Python Programming** course.
-This package contains a custom implementation of the **Random Forest** and **Decision Tree** algorithms, built from scratch using NumPy, along with a performance comparison against the Scikit-Learn library.
+Authors and Context
+===================
 
-Authors
-=======
-* Jakub Łudzik
-* Filip Żurek
+* **Authors:**
+    * Jakub Łudzik
+    * Filip Żurek
+* **Institution:** AGH University of Krakow
+* **Faculty:** Faculty of Computer Science, Electronics and Telecommunications
+* **Field of Study:** Electronics and Telecommunications
+* **Course:** Programming in Python Language
 
 Project Description
 ===================
+Final project for the **Python Programming** course.
 The goal of this project was to create a fully functional Random Forest classifier that:
+
 * Implements the Decision Tree algorithm (tree growth, entropy calculation, information gain).
 * Implements the Random Forest ensemble method (bootstrapping, vote aggregation).
 * Adheres to the Scikit-Learn interface (providing ``fit`` and ``predict`` methods).
@@ -68,7 +73,7 @@ Follow these steps to set up the project environment from scratch.
 Usage
 =====
 
-Ensure your virtual environment is activated (step 3 above) before running these commands.
+Ensure your virtual environment is activated before running these commands.
 
 1. **Unit Tests:**
    To verify the correctness of the implementation:
@@ -86,7 +91,7 @@ Ensure your virtual environment is activated (step 3 above) before running these
 
    The results will be saved as ``comparision_plots.png``.
 
-    .. image:: https://github.com/jludzik/randomForest/blob/main/example/comparision_plots.png?raw=true
+    .. image:: https://raw.githubusercontent.com/jludzik/randomForest/main/example/comparision_plots.png
        :width: 800
        :alt: Comparison of Accuracy results
 
@@ -98,3 +103,11 @@ Ensure your virtual environment is activated (step 3 above) before running these
        cd docs
        make html
        # Open docs/_build/html/index.html in your browser
+
+License
+=======
+
+This software is distributed under the MIT License. Refer to the `LICENSE.txt` file for the full text.
+
+--------------------------------------------------------------------------------
+*AGH University of Krakow - Programming in Python Language Course Project 2025*
