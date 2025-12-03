@@ -110,5 +110,5 @@ License
 
 This software is distributed under the MIT License. Refer to the `LICENSE.txt` file for the full text.
 
---------------------------------------------------------------------------------
+---
 *AGH University of Krakow - Programming in Python Language Course Project 2025*
