@@ -69,7 +69,7 @@ Follow these steps to set up the project environment from scratch.
 
        pip install --upgrade pip
        pip install -e .
-       pip install matplotlib pandas scikit-learn pytest sphinx
+       pip install matplotlib pandas scikit-learn pytest pytest-conv sphinx
 
 Usage
 =====
