@@ -21,18 +21,54 @@ The goal of this project was to create a fully functional Random Forest classifi
 * Implements the Random Forest ensemble method (bootstrapping, vote aggregation).
 * Adheres to the Scikit-Learn interface (providing ``fit`` and ``predict`` methods).
 
-Requirements and Installation
-=============================
-The project relies on ``numpy``, ``pandas``, ``matplotlib``, and ``scikit-learn`` (for benchmarking purposes).
+Installation Guide (Step-by-Step)
+=================================
+Follow these steps to set up the project environment from scratch.
 
-To install the package in development mode:
+1. **Prerequisites**
+   Ensure you have Python 3.8+ installed. You can check this by running:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    pip install -e .
+       python --version
+
+2. **Create a Virtual Environment**
+   It is highly recommended to run this project in an isolated virtual environment. Run the following command in the project root directory:
+
+   .. code-block:: bash
+
+       python -m venv .venv
+
+3. **Activate the Virtual Environment**
+   You need to activate the environment before installing packages.
+
+   * **On macOS / Linux:**
+
+     .. code-block:: bash
+
+         source .venv/bin/activate
+
+   * **On Windows (PowerShell/CMD):**
+
+     .. code-block:: bash
+
+         .venv\Scripts\activate
+
+   *(You should see `(.venv)` appear at the beginning of your terminal line).*
+
+4. **Install the Package and Dependencies**
+   Install the project in editable mode along with required libraries for plotting and testing:
+
+   .. code-block:: bash
+
+       pip install --upgrade pip
+       pip install -e .
+       pip install matplotlib pandas scikit-learn pytest sphinx
 
 Usage
 =====
+
+Ensure your virtual environment is activated (step 3 above) before running these commands.
 
 1. **Unit Tests:**
    To verify the correctness of the implementation:
@@ -61,3 +97,4 @@ Usage
 
        cd docs
        make html
+       # Open docs/_build/html/index.html in your browser
