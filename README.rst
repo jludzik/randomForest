@@ -62,7 +62,7 @@ Follow these steps to set up the project environment from scratch.
    *(You should see `(.venv)` appear at the beginning of your terminal line).*
 
 4. **Install the Package and Dependencies**
-   Install the project dependencies from requirements file and the package in editable mode:
+   Install the project dependencies from the requirements file and the package in editable mode:
 
    .. code-block:: bash
 
@@ -78,14 +78,14 @@ Usage
 
 Ensure your virtual environment is activated before running these commands.
 
-1. **Unit Tests:**
+1. **Unit Tests**
    To verify the correctness of the implementation:
 
    .. code-block:: bash
 
        pytest
 
-2. **Comparison with Scikit-Learn (Plots):**
+2. **Comparison with Scikit-Learn (Plots)**
    To generate comparison plots (Accuracy vs. Tree Depth / Number of Estimators):
 
    .. code-block:: bash
@@ -94,11 +94,11 @@ Ensure your virtual environment is activated before running these commands.
 
    The results will be saved as ``comparision_plots.png``.
 
-    .. image:: https://raw.githubusercontent.com/jludzik/randomForest/main/example/comparision_plots.png
-       :width: 800
-       :alt: Comparison of Accuracy results
+   .. image:: https://raw.githubusercontent.com/jludzik/randomForest/main/example/comparision_plots.png
+      :width: 800
+      :alt: Comparison of Accuracy results
 
-3. **Documentation:**
+3. **Documentation**
    The documentation source is located in the ``docs/`` directory. To build the HTML version:
 
    .. code-block:: bash
