@@ -12,9 +12,12 @@ This package contains a custom implementation of the **Random Forest** and **Dec
 Authors and Context
 ===================
 
-* **Authors:**
+* **Project Authors (Developers):**
     * Jakub Łudzik
     * Filip Żurek
+* **Peer Reviewers (Testers):**
+    * Paweł Michalcewicz
+    * Krystian Ruszczak
 * **Institution:** AGH University of Krakow
 * **Faculty:** Faculty of Computer Science, Electronics and Telecommunications
 * **Field of Study:** Electronics and Telecommunications
